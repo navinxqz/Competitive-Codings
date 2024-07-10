@@ -3,8 +3,8 @@
 .idea
 bin
 obj
-.csproj
-.sln
+*.csproj
+*.sln
 
 # Files
 *.user
