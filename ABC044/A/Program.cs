@@ -33,6 +33,6 @@ class Program{
         int y = Convert.ToInt32(Console.ReadLine());
 
         Hotel tak = new Hotel(n,k,x,y);
-        System.Console.WriteLine($"Fee: {tak.totalFee()}");
+        System.Console.WriteLine($"Total Fee: {tak.totalFee()} ¥");
     }
 }
