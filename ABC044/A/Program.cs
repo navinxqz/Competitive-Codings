@@ -8,6 +8,15 @@
         this.n = n; this.k = k;
         this.x = x; this.y = y;
     }
+    public int totalFee(){
+        if(n <=k){
+            return n*x;
+        }else{
+            int init = k*x;
+            int seq = (n-k)*y;
+            return seq+init;
+        }
+    }
 }
 class Program{
     public static void Main(string[] args){
@@ -20,9 +29,10 @@ class Program{
         Console.Write($"{k} night fee X = ");
         int x = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("(k+1) & sunsequent night fee Y = ");
+        Console.Write($"({k}+1) & subsequent night fee Y = ");
         int y = Convert.ToInt32(Console.ReadLine());
 
         Hotel tak = new Hotel(n,k,x,y);
+        System.Console.WriteLine($"Fee: {tak.totalFee()}");
     }
 }
