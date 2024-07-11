@@ -13,7 +13,7 @@ public static void Main(string[] args){
         int area = ((a+b)*h)/2;
         Console.WriteLine("Area: "+area);
     }else{
-        Console.WriteLine("Constraints condtions not fulfilled!");
+        Console.WriteLine("Out of constraints!\n");
     }
 }
 }
