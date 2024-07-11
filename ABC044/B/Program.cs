@@ -15,6 +15,6 @@
         Console.Write("Input String: ");
         string input = Console.ReadLine();
 
-        Console.WriteLine("String beautiful? : {0}",IsBeautiful(input));
+        Console.WriteLine("String beautiful? : {0}",IsBeautiful(input.ToLower()));
     }
 }
