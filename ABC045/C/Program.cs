@@ -40,7 +40,8 @@ class Program{
     }
     
     public static void Main(string[] args){
+        Console.Write("\nvalue: ");
         string s = Console.ReadLine();
-        Console.WriteLine(Formulas(s));
+        Console.WriteLine("Sum: "+ Formulas(s));
     }
 }
