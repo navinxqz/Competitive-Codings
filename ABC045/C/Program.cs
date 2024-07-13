@@ -9,5 +9,14 @@
         }output += temp;
         return output;
     }
+    static long Calculation(string s){
+        long sum = 0;
+        for(int i = 0;i<s.Length;i++){
+            for(int j = i+1;j<s.Length;j++){
+                string substring = s.Substring(i,j-i);
+                sum += Calculation(substring);
+            }
+        }return sum;
+    }
     public static void Main(string[] args){}
 }
