@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 class Program{
     static long Temp(string s){ //used long to store large value that int can't handle
-        long output = 0;    //for avoiding garbage value
+    //to sum the part separated by +
+        long output = 0;
         //long temp = 0;
 
         string[] part = s.Split('+');
@@ -9,10 +10,14 @@ class Program{
             output += long.Parse(e2);
         }return output;
     }
-    static string[] forms(string s){
-        int combination = 1 << (s.Length-1);
+    static int Combination(int n){
+        if(n==0){ return 1;}
+        return 2*Combination(n-1);
+    }
+    static string[] forms(string s){    //all the possible formula & insert +
+        int combination = Combination(s.Length-1);
         string[] result = new string[combination];
-        for(int i = 0; i<combination;i++){
+        for(int i = 0; i<combination; i++){
             string pattern = "";
 
             for(int j=0;j<s.Length;j++){
@@ -30,12 +35,6 @@ class Program{
         foreach(var item in p){
             sum += Temp(item);
         }return sum;
-        /*for(int i = 0;i<s.Length;i++){
-            for(int j = i+1;j<s.Length;j++){
-                string substring = s.Substring(i,j-i);
-                sum += Temp(substring);
-            }
-        }   */
     }
     
     public static void Main(string[] args){
