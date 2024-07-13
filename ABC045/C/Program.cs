@@ -14,9 +14,12 @@
         for(int i = 0;i<s.Length;i++){
             for(int j = i+1;j<s.Length;j++){
                 string substring = s.Substring(i,j-i);
-                sum += Calculation(substring);
+                sum += Temp(substring);
             }
         }return sum;
     }
-    public static void Main(string[] args){}
+    public static void Main(string[] args){
+        long s = Convert.ToInt64(Console.ReadLine());
+        System.Console.WriteLine(s);
+    }
 }
