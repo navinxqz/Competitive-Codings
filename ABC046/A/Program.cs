@@ -8,6 +8,8 @@ class Program{
 
         int[] color = {a,b,c};
         Console.WriteLine(color.Distinct().Count());    */
+
         Console.WriteLine(Console.ReadLine().Split(' ').Distinct().Count());
+        //parse string to int may b good to implement too //Select(int.Parse)
     }
 }
